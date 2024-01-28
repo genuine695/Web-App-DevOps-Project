@@ -56,7 +56,26 @@ To run the application, you simply need to run the `app.py` script in this repos
 ## Contributors 
 
 - [Maya Iuga]([https://github.com/yourusername](https://github.com/maya-a-iuga))
+- [Genuine Mathew]
+
+## Project Milestones
+
+### Milestone 1
+
+Understanding project requirements and setting up the virtual enviornment
+
+### Milestone 2
+
+- Forked and cloned the project repository.
+- Created a feature branch (feature/add-delivery-date) from the main branch.
+- Updated app.py and order.html to include a delivery date column in the order list output.
+- Pushed changes to the remote repository and submitted a pull request.
+- As the PR reviewer, merged the pull request.
+- Created a branch (revert-delivery-date) to revert changes due to a missing delivery_date column in the database.
+- Merged the revert-delivery-date branch to undo the changes.
+
 
 ## License
 
 This project is licensed under the MIT License. For more details, refer to the [LICENSE](LICENSE) file.
+
