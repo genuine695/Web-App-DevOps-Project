@@ -75,6 +75,15 @@ To run the application, you simply need to run the `app.py` script in this repos
 - Merged the revert-delivery-date branch to undo the changes.
 
 
+### Milestone 3
+
+- Created Dockerfile to configure layers for image building.
+- Executed the build command for image creation.
+- Addressed port and revert-delivery-date issues from the previous milestone.
+- Tested container functionality to ensure proper operation.
+- Uploaded the image to the Docker Hub registry.
+- Updated README.md
+
 ## License
 
 This project is licensed under the MIT License. For more details, refer to the [LICENSE](LICENSE) file.
