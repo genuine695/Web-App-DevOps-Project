@@ -84,6 +84,42 @@ To run the application, you simply need to run the `app.py` script in this repos
 - Uploaded the image to the Docker Hub registry.
 - Updated README.md
 
+### Milestone 4
+
+#### Task 1
+- Read and understand the milestone requirements.
+- Review and confirm prerequisites.
+- Initialized the project, including the creation of the aks-terraform directory and its subdirectories: aks-cluster-module and networking-module.
+- Double-checked all the work before proceeding to Task 2.
+
+#### Task 2
+- Created variable.tf in networking-module.
+- Defined variables for location, virtual network address space, and resource group name.
+- Configured and customized the variable block for description, type, and default values.
+- Double-checked all the work before moving on to Task 3.
+
+#### Task 3
+- Create main.tf in networking-module
+- Created a resource group and configured it through key-value pair arguments inside the resource block.
+- Created a Virtual Network and two subnets (worker node and control plane) for AKS, configuring them through key-value pair arguments inside the resource block.
+- Created a network security group and configured rules such as inbound, TCP protocol, source destination, etc.
+- Double-checked all the work before moving on to Task 4.
+
+#### Task 4
+- Created outputs.tf in networking-module
+- Create output variables to store IDs for the network security group, subnets and VNet.
+- Double-checked all the work before moving onto Task 5
+
+
+#### Task 5
+- Executed the terraform init command to initialize the networking-module, which installs all the relevant dependencies and state files.
+
+#### Task 6
+- Documented the progress, deliverables and updates in README.md
+
+#### TODO
+- Update all documentation style to that of Milestone 4
+
 ## License
 
 This project is licensed under the MIT License. For more details, refer to the [LICENSE](LICENSE) file.
