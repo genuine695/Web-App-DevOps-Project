@@ -89,7 +89,7 @@ To run the application, you simply need to run the `app.py` script in this repos
 #### Task 1
 - Read and understand the milestone requirements.
 - Review and confirm prerequisites.
-- Initialized the project, including the creation of the aks-terraform directory and its subdirectories: aks-cluster-module and networking-module.
+- Creation of the aks-terraform directory and its subdirectories: aks-cluster-module and networking-module.
 - Double-checked all the work before proceeding to Task 2.
 
 #### Task 2
@@ -117,8 +117,50 @@ To run the application, you simply need to run the `app.py` script in this repos
 #### Task 6
 - Documented the progress, deliverables and updates in README.md
 
-#### TODO
+### Milestone 5
+
+#### Task 1
+- Read and understand the milestone requirements.
+- Review and confirm prerequisites.
+- Created variable.tf in aks-cluster-module.
+- Define the following input variables:
+	- A aks_cluster_name variable that represents the name of the AKS cluster you wish to create.
+	- A cluster_location variable that specifies the Azure region where the AKS cluster will be deployed to.
+	- A dns_prefix variable that defines the DNS prefix of cluster.
+	- A kubernetes_version variable that specifies which Kubernetes version the cluster will use.
+	- A service_principal_client_id variable that provides the Client ID for the service principal associated with the cluster.
+	- A service_principal_secret variable that supplies the Client Secret for the service principal.
+	- The resource_group_name variable.
+	- The vnet_id variable.
+	- The control_plane_subnet_id variable.
+	- The worker_node_subnet_id variable.
+- Double-checked all the work before moving on to Task 2.
+
+#### Task 2
+- Create main.tf in aks-cluster-module.
+- Create resource block for defining the necessary Azure resources for provisioning an AKS cluster. This includes creating the AKS cluster, specifying the node pool and the service principal.
+- Configured and customised the AKS cluster modules using the input variables from the previous task.
+- Double-checked all the work before moving on to Task 3
+
+#### Task 3
+- Created outputs.tf in aks-cluster-module
+- Create the following output variables:
+	- A aks_cluster_name variable that will store the name of the provisioned cluster.
+	- A aks_cluster_id variable that will store the ID of the cluster.
+	- A aks_kubeconfig variable that will capture the Kubernetes configuration file of the cluster. This file is essential for interacting with and managing the AKS cluster using kubectl.
+- Double-checked all the work before moving onto Task 4
+
+#### Task 4
+- Executed the terraform init command to initialize the aks-cluster-module, which installs all the relevant dependencies and state files.
+
+#### Task 5
+- Documented the progress, deliverables and updates in README.md
+
+
+### TODO
 - Update all documentation style to that of Milestone 4
+
+
 
 ## License
 
