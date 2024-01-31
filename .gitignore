@@ -1,2 +1,5 @@
 **/.terraform/
 **/.terraform.lock.hcl
+aks-terraform/terraform.tfstate
+aks-terraform/terraform.tfstate.backup
+

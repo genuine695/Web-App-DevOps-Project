@@ -1,9 +1,9 @@
-# main.tf (Dont forget to edit like the resource group name)
+# main.tf 
 
 variable "aks_cluster_name" {
   description = "Name of the AKS cluster."
   type        = string
-  default = "aicore-aks-cluster"
+  default = "terraform-aks-cluster"
  
 }
 
@@ -17,28 +17,28 @@ variable "aks_cluster_location" {
 variable "dns_prefix" {
   description = "DNS prefix of cluster."
   type        = string
-  #default = "aicore-aks-project"
+  default = "myaks-project"
 
 }
 
 variable "kubernetes_version" {
   description = "Kubernetes version the cluster will use."
   type        = string
-  default = "1.28.3"
+  default = "1.26.6"
  
 }
 
 variable "service_principal_client_id" {
   description = "Client ID for the service principal associated with the cluster"
   type        = string
-  default = "2eaa78b2-2f0a-4e70-bca3-cf3480b592ed"
+  default = "9d09d64d-2860-4450-bdb8-634146c2ed9d"
 
 }
 
 variable "service_principal_secret" {
   description = "Client Secret for the service principal."
   type        = string
-  default = "E0r8Q~b5GpU6fQU-uQueXatsTQQZAwFUJOaLQady"
+  default = "Nzy8Q~.bjswJ-vgiboSF_xVB~lTQPC73ox4V2aKD"
  
 }
 
@@ -64,5 +64,5 @@ variable "worker_node_subnet_id" {
 variable "resource_group_name" {
   description = "The name of the Azure Resource Group."
   type        = string
-  default = "aicore-devops-project-1"
+  default = "aicore-webapp-devops-1"
 }

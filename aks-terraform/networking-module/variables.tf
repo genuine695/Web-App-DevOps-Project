@@ -3,7 +3,7 @@
 variable "resource_group_name" {
     description = "The name of the resource group where Networking will be created"
     type = string
-    default = "aicore-devops-project-1"
+    default = "aicore-webapp-devops-1"
 }
 
 variable "location" {
