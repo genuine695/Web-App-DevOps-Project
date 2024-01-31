@@ -156,6 +156,45 @@ To run the application, you simply need to run the `app.py` script in this repos
 #### Task 5
 - Documented the progress, deliverables and updates in README.md
 
+### Milestone 6
+
+#### Task 1
+- Create main.tf configuration file in aks-terraform directory.
+- Define Azure provider block in main.tf for authentication.
+- Create variables.tf file with input variables for client_id and client_secret.
+- Set environment variables for storing client_id and client_secret securely.
+
+#### Task 2
+- Integrate the networking module into the main project's configuration file (main.tf) after provisioning the provider block.
+- Ensure that the networking resources defined in the module are included and accessible in the main project.
+- When calling the networking module, provide the following input variables:
+	- Set resource_group_name to a descriptive name (e.g., "networking-resource-group").
+	- Set location to an Azure region geographically close to you (e.g., "UK South") to improve latency.
+	- Set vnet_address_space to ('10.0.0.0/16') for the virtual network address space.
+
+#### Task 3
+- Integrate the cluster module into the main project's configuration file (main.tf) for connecting AKS cluster specifications.
+	- Provide the following input variables when calling the module:
+	- Set cluster_name to "terraform-aks-cluster".
+	- Set location to an Azure region geographically close to you (e.g., "UK South") to improve latency.
+	- Set dns_prefix to "myaks-project".
+	- Set kubernetes_version to a Kubernetes version supported by AKS, such as "1.26.6".
+	- Set service_principal_client_id and service_principal_secret to your service principal credentials.
+	- Utilize variables referencing the output variables from the networking module for other required input variables: 
+		resource_group_name, vnet_id, control_plane_subnet_id, worker_node_subnet_id
+
+#### Task 4
+- Initialize the Terraform project in the main directory.
+- Apply the Terraform configuration to create defined infrastructure, including networking resources and AKS cluster.
+- Add the resultant state file to .gitignore to prevent exposing secrets.
+
+#### Task 5
+- Retrieve kubeconfig file after AKS cluster provisioning.
+- Use the kubeconfig file to securely connect to the newly created cluster.
+- Confirm successful provisioning and operational status by connecting to the cluster.
+
+#### Task 6
+- Updates README.md documentation
 
 ### TODO
 - Update all documentation style to that of Milestone 4
