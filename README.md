@@ -196,10 +196,47 @@ To run the application, you simply need to run the `app.py` script in this repos
 #### Task 6
 - Updates README.md documentation
 
+### Milestone 7
+
+#### Task 1
+- Create a Kubernetes manifest file named application-manifest.yaml.
+- Define a Deployment resource within the manifest file to deploy the containerized web application on the Terraform-provisioned AKS cluster.
+- Specify the Deployment name as flask-app-deployment to act as a central reference for managing the application.
+- Set the number of replicas to 2 to enable concurrent running on two pods within the AKS cluster for scalability and high availability.
+- In the selector field, use the matchLabels section to uniquely identify the application by specifying a label (e.g., app: flask-app).
+- Configure the manifest to point to the Docker Hub container hosting the application to ensure the correct container image is used for deployment.
+- Expose port 5000 for communication within the AKS cluster, serving as the gateway for accessing the application's user interface as defined in the application code.
+- Implement the Rolling Updates deployment strategy for seamless application updates.
+- Ensure that during updates, a maximum of one pod deploys while one pod becomes temporarily unavailable, maintaining application availability.
+
+#### Task 2
+- Within the existing application-manifest.yaml file, add a Kubernetes Service manifest for internal communication within the AKS cluster.
+- Define a service named flask-app-service to serve as a reference for routing internal communication.
+- Ensure that the selector in the service matches the labels (app: flask-app) of the pods defined in the Deployment manifest. 
+- Configure the service to use the TCP protocol on port 80 for internal communication within the cluster.
+- Set the targetPort to 5000, corresponding to the port exposed by the containerized application.
+- Set the service type to ClusterIP, designating it as an internal service within the AKS cluster.
+- You can include multiple manifests in the same .yaml file using the --- operator to separate distinct services configurations.
+
+#### Task 3
+- Confirm the correct context is set for the Terraform-provisioned AKS cluster.
+- Deploy the Kubernetes manifests using the appropriate command-line interface (kubectl apply -f application-manifest.yaml).
+- Monitor the command-line interface for feedback on the deployment process.
+- After successful deployment, verify the status of pods and services using commands like kubectl get pods and kubectl get services.
+- Ensure that pods are running as expected to confirm the reliability of the deployment.
+
+#### Task 4
+- Verify the status and details of pods and services within the AKS cluster to ensure proper running and exposure.
+- After confirming pod and service health, initiated port forwarding.
+- The port forwarding command establishes a secure channel, enabling local interaction with your application.
+- Access web application locally at http://127.0.0.1:5000 with port forwarding in place.
+- Thoroughly test the functionality of web application, especially order funcation
+
+#### Task 5
+Updates README.md documentation
+
 ### TODO
 - Update all documentation style to that of Milestone 4
-
-
 
 ## License
 
