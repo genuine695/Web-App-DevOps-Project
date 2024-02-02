@@ -233,10 +233,58 @@ To run the application, you simply need to run the `app.py` script in this repos
 - Thoroughly test the functionality of web application, especially order funcation
 
 #### Task 5
-Updates README.md documentation
+- Updates README.md documentation
+
+### Milesone 8
+
+
+#### Task 1
+- Refreshed my memory and understanding by going through the prerequisites
+- Create an Azure DevOps project in the Azure DevOps account.
+
+#### Task 2
+- Select GitHub repository for source control.
+- Create initial pipeline using Starter Pipeline template.
+- Integrate chosen GitHub repository.
+- Verify initial pipeline configuration.
+- Push any configuration changes made during setup.
+- Manually trigger pipeline to confirm execution.
+- Check pipeline status in Azure DevOps.
+
+#### Task 3
+- Create a personal access token on Docker Hub.
+- Configure an Azure DevOps service connection using the Docker Hub token.
+- Verify the successful establishment of the connection.
+
+#### Task 4
+- Add Docker task with buildandPush command to the pipeline.
+- Use the same Docker image name as used in the local development environment.
+- Set up the pipeline to run automatically on each push to the main branch.
+- Execute the CI/CD pipeline and test the newly created Docker image by pulling it from Docker Hub locally.
+- Run the container and verify its functionality to ensure the application works as expected.
+
+#### Task 5
+- Create and configure AKS service connection in Azure DevOps.
+- Establish a secure link between CI/CD pipeline and AKS cluster for seamless deployments and effective management.
+
+#### Task 6
+- Integrate Deploy to Kubernetes task with kubectl command into CI/CD pipeline configuration.
+- Utilize the deployment manifest in the application repository.
+- Leverage the previously established AKS connection for automatic deployment to the AKS cluster.
+
+#### Task 7
+- Test and validate the CI/CD pipeline functionality after configuration.
+- Monitor pod status in the AKS cluster to confirm correct creation.
+- Securely access the application on AKS by initiating port forwarding using kubectl.
+- Use the locally exposed address from the cluster to test and ensure the application functions correctly.
+- Validate the effectiveness of the CI/CD pipeline in deploying the application.
+
+#### Task 8
+- Updates README.md documentation
 
 ### TODO
-- Update all documentation style to that of Milestone 4
+- Documentation is too detailed, needs to be cut down in size
+- Follow prescribed and good software development practises
 
 ## License
 
