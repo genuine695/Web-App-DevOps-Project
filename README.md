@@ -237,7 +237,6 @@ To run the application, you simply need to run the `app.py` script in this repos
 
 ### Milesone 8
 
-
 #### Task 1
 - Refreshed my memory and understanding by going through the prerequisites
 - Create an Azure DevOps project in the Azure DevOps account.
@@ -282,9 +281,43 @@ To run the application, you simply need to run the `app.py` script in this repos
 #### Task 8
 - Updates README.md documentation
 
+### Milestone 9
+
+#### Task 1
+- Enabled Container Insights for my AKS cluster.
+- Ensured to follow the correct steps:
+	- Enabled managed identity on the AKS cluster.
+	- Set the necessary permissions for the Service Principal associated with the managed identity.
+	- Enabled Container Insights on the AKS cluster only after completing the above steps.
+
+#### Task 2
+- Created, configured, and saved charts for the following in Metrics Explorer:
+	- Average Node CPU Usage: Tracks CPU usage of AKS cluster's nodes for resource allocation and performance.
+	- Average Pod Count: Displays average number of running pods for capacity and workload assessment.
+	- Used Disk Percentage: Monitors disk usage to prevent storage-related issues.
+	- Bytes Read and Written per Second: Tracks data I/O for identifying performance bottlenecks.
+
+#### Task 3
+Configured Log Analytics to execute and save logs:
+	- Average Node CPU Usage Percentage per Minute
+	- Average Node Memory Usage Percentage per Minute
+	- Pods Counts with Phase
+	- Find Warning Value in Container Logs
+	- Monitoring Kubernetes Events
+
+#### Task 4
+- Set up an alert rule to check every 5 minutes and have a loopback period of 15 minutes that trigger an alarm when the used disk percentage in the AKS cluster exceeds 90%.
+
+#### Task 5
+- Adjusted the alert rules for CPU usage and memory working set percentage to trigger when they exceed 80%
+
+#### Task 6 
+- update the README.md documentation for Milestone 9
+
 ### TODO
-- Documentation is too detailed, needs to be cut down in size
-- Follow prescribed and good software development practises
+- Documentation is too detailed, needs to be cut down in size.
+- Follow prescribed and good software development practises.
+- Add images to complement milestone completions. 
 
 ## License
 
