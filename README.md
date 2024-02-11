@@ -314,6 +314,17 @@ Configured Log Analytics to execute and save logs:
 #### Task 6 
 - update the README.md documentation for Milestone 9
 
+### Milestone 10
+- Created an Azure Key Vault.
+- Assigned the Key Vault Administrator role to my Microsoft Entra ID.
+- Create four secrets in the Key Vault: server name, server username, server password, and the database name.
+- Enabled managed identity for the AKS cluster to allow it to authenticate and interact securely with the Key Vault.
+- Assigned the Key Vault Secrets Officer role to the managed identity associated with AKS.
+- Integrated the Azure Identity and Azure Key Vault libraries into the Python application code to facilitate communication with Azure Key Vault. 
+- Updated requirements.txt for Docker Image.
+- Deployed the modified application to the AKS cluster using the pre-established Azure DevOps CI/CD pipeline.
+
+
 ### TODO
 - Documentation is too detailed, needs to be cut down in size.
 - Follow prescribed and good software development practises.
